@@ -1,0 +1,112 @@
+/* vigo.css — rezultat vježbe i sigurno sučelje (T15, T16, R006, R012) */
+
+.rezultat-main {
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.rezultat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.rezultat-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  display: block;
+  animation: bounce 0.6s ease-out 0.2s both;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(0.5); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.rezultat-naslov {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.rezultat-pohvala {
+  font-size: 15px;
+  color: var(--primary-700);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Metrike */
+.rezultat-metrike {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.metrika {
+  padding: 12px 8px;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.metrika-vrijednost {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metrika-naziv {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Ponuda ponavljanja < 50% (R012) */
+.ponuda-ponavljanja {
+  padding: 12px 14px;
+  background: #FFF8E8;
+  border: 1px solid #EF9F27;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.ponuda-ponavljanja p {
+  font-size: 13px;
+  color: #7A5A00;
+  line-height: 1.5;
+}
+
+/* Akcijski gumbi */
+.rezultat-akcije {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .rezultat-card { padding: 24px 16px; }
+  .rezultat-naslov { font-size: 22px; }
+  .metrika-vrijednost { font-size: 17px; }
+}

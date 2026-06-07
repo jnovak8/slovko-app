@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovko – Rezultat vježbe</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="vigo.css">
+</head>
+<body>
+
+  <div class="disclaimer-bar">
+    Ovaj alat nije medicinski uređaj. Koristi se isključivo u edukativne svrhe.
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true">
+          <rect width="120" height="120" rx="16" fill="#1D9E75"/>
+          <rect x="24" y="28" width="72" height="58" rx="6" fill="#E1F5EE"/>
+          <rect x="24" y="28" width="10" height="58" rx="5" fill="#9FE1CB"/>
+          <circle cx="72" cy="70" r="18" fill="#1D9E75"/>
+          <path d="M63 70 L69 76 L82 63" fill="none" stroke="#E1F5EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="nav-title">Slovko</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="rezultat-main">
+
+    <!-- REZULTAT VJEŽBE (T16, R012) -->
+    <div class="rezultat-card" id="rezultatCard" role="region" aria-label="Rezultat vježbe">
+
+      <div class="rezultat-icon" aria-hidden="true">🏆</div>
+
+      <!-- Prikaz rezultata (R012: "7 od 10 točnih") -->
+      <h1 id="rezultatNaslov" class="rezultat-naslov">7 od 10 točnih</h1>
+
+      <!-- Ohrabrujuća poruka — NIKAD negativna (R006, R012) -->
+      <p class="rezultat-pohvala" id="rezultatPohvala" aria-live="polite">
+        Odlično si se trudio! 🌟
+      </p>
+
+      <!-- Metrike -->
+      <div class="rezultat-metrike">
+        <div class="metrika">
+          <span class="metrika-vrijednost" id="metrikaTocnost">70%</span>
+          <span class="metrika-naziv">Točnost</span>
+        </div>
+        <div class="metrika">
+          <span class="metrika-vrijednost" id="metrikaTrajanje">4 min</span>
+          <span class="metrika-naziv">Trajanje</span>
+        </div>
+        <div class="metrika">
+          <span class="metrika-vrijednost" id="metrikaZvjezdice">+3 ⭐</span>
+          <span class="metrika-naziv">Zvjezdice</span>
+        </div>
+      </div>
+
+      <!-- Ponuda ponavljanja ako < 50% (R012) -->
+      <div id="ponudaPonavljanja" class="ponuda-ponavljanja" hidden>
+        <p>Ima mjesta za napredak! Želiš li ponoviti vježbu?</p>
+      </div>
+
+      <!-- Gumbi akcija -->
+      <div class="rezultat-akcije">
+        <a href="vjezbe.html" class="btn btn-primary btn-full">Sljedeća vježba</a>
+        <button class="btn btn-secondary btn-full" onclick="ponovi()">Ponovi ovu vježbu</button>
+        <a href="chatbot.html" class="btn btn-secondary btn-full">Razgovaraj sa Slovkom</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="vigo.js"></script>
+</body>
+</html>
