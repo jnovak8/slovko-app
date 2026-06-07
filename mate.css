@@ -1,0 +1,122 @@
+/* mate.css — vježbe i pristupačan dizajn (T9, T20, R007, R015) */
+
+/* ─── LAYOUT (R017) ───────────────────────────────────────────────────────── */
+.vjezbe-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  padding: 20px 24px;
+  min-height: calc(100vh - 80px);
+}
+
+/* ─── SIDEBAR — odabir vježbe (T9, R007) ─────────────────────────────────── */
+.vjezbe-sidebar h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.vjezba-lista { display: flex; flex-direction: column; gap: 8px; }
+
+/* Gumbi vježbi — min. 44×44px (R007), jasne labele (T9) */
+.vjezba-kartica {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  text-align: left;
+  min-height: 60px;       /* > 44px (R007) */
+  width: 100%;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.vjezba-kartica:hover { border-color: var(--primary-200); background: var(--primary-50); }
+.vjezba-kartica:focus { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+.vjezba-aktivna { border: 2px solid var(--primary) !important; background: var(--primary-50) !important; }
+
+.vjezba-ikona {
+  width: 32px; height: 32px; border-radius: 6px; background: var(--bg-secondary);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  color: var(--text-secondary);
+}
+.vjezba-aktivna .vjezba-ikona { background: var(--primary-100); color: var(--primary-700); }
+
+.vjezba-naziv { font-size: 13px; font-weight: 500; color: var(--text-primary); display: block; }
+.vjezba-meta { font-size: 11px; color: var(--text-secondary); display: block; margin-top: 2px; }
+
+/* ─── AKTIVNA VJEŽBA ─────────────────────────────────────────────────────── */
+.vjezba-aktivan {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.ucitavanje { padding: 40px; text-align: center; color: var(--text-secondary); font-size: 15px; }
+
+.zadatak-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+}
+.zadatak-broj { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+.zadatak-tocni { font-size: 12px; color: var(--primary-700); background: var(--primary-50); padding: 3px 10px; border-radius: 20px; }
+
+/* Progress bar */
+.progres-bar {
+  height: 5px; background: var(--bg-secondary); border-radius: 3px; margin-bottom: 18px; overflow: hidden;
+}
+.progres-fill {
+  height: 100%; background: var(--primary); border-radius: 3px; transition: width 0.4s ease;
+}
+
+/* Tekst vježbe (R015 — min 16px, R016 — SVO) */
+.zadatak-tekst {
+  padding: 14px 16px; background: var(--bg-secondary); border-radius: 8px;
+  font-size: 16px; line-height: 1.7; color: var(--text-primary); margin-bottom: 14px;
+}
+.zadatak-pitanje {
+  font-size: 16px; font-weight: 500; color: var(--text-primary); margin-bottom: 14px; line-height: 1.5;
+}
+.zadatak-recjenica {
+  font-size: 17px; color: var(--text-primary); padding: 14px 16px; background: var(--bg-secondary);
+  border-radius: 8px; margin-bottom: 14px; line-height: 1.7;
+}
+
+/* Opcije odgovora (R007 — min 44×44px, jasne labele) */
+.odgovori { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+
+.odgovor-opcija {
+  padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface); font-size: 15px; font-family: inherit;
+  color: var(--text-primary); cursor: pointer; text-align: left;
+  min-height: 48px;   /* R007 */
+  transition: all 0.15s;
+}
+.odgovor-opcija:hover:not(:disabled) { border-color: var(--primary-200); background: var(--primary-50); }
+.odgovor-opcija:focus { outline: 3px solid var(--primary); outline-offset: 2px; }
+.odgovor-opcija:disabled { cursor: not-allowed; }
+
+/* Točan/netočan (R012 — vizualni feedback) */
+.odgovor-tocno  { border: 2px solid var(--primary) !important; background: var(--primary-50) !important; color: var(--primary-800) !important; }
+.odgovor-netocno { border: 2px solid #E24B4A !important; background: #FCEBEB !important; color: #A32D2D !important; }
+.odgovor-tocno-pokazi { border: 2px solid var(--primary) !important; background: var(--primary-50) !important; }
+
+/* Feedback poruka (R006, R012) */
+.feedback {
+  padding: 10px 14px; border-radius: 8px; font-size: 14px; line-height: 1.5; min-height: 20px;
+}
+.feedback-tocno  { background: var(--primary-50); color: var(--primary-800); border: 1px solid var(--primary-100); }
+.feedback-netocno { background: #FFF8E8; color: #7A5A00; border: 1px solid #EF9F27; }
+
+/* Responzivnost vježbi (R017) */
+@media (max-width: 700px) {
+  .vjezbe-layout { grid-template-columns: 1fr; padding: 12px 16px; gap: 12px; }
+  .vjezbe-sidebar { display: flex; flex-direction: column; }
+  .vjezba-lista { flex-direction: row; overflow-x: auto; gap: 8px; }
+  .vjezba-kartica { min-width: 160px; flex-shrink: 0; }
+}
