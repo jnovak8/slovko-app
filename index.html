@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovko – Početna</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="jan.css">
+</head>
+<body>
+
+  <!-- NAPOMENA (R004, R020) -->
+  <div class="disclaimer-bar">
+    Ovaj alat nije medicinski uređaj. Koristi se isključivo u edukativne svrhe.
+  </div>
+
+  <!-- NAVIGACIJA -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true">
+        <rect width="120" height="120" rx="16" fill="#1D9E75"/>
+        <rect x="24" y="28" width="72" height="58" rx="6" fill="#E1F5EE"/>
+        <rect x="24" y="28" width="10" height="58" rx="5" fill="#9FE1CB"/>
+        <rect x="38" y="38" width="18" height="3" rx="1.5" fill="#0F6E56" opacity="0.5"/>
+        <rect x="38" y="45" width="13" height="3" rx="1.5" fill="#0F6E56" opacity="0.4"/>
+        <circle cx="72" cy="70" r="18" fill="#1D9E75"/>
+        <path d="M63 70 L69 76 L82 63" fill="none" stroke="#E1F5EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="nav-title">Slovko</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">O alatu</a>
+      <a href="#">Za roditelje</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="roditelj-dashboard.html" class="btn btn-sm">Prijava</a>
+    </div>
+  </nav>
+
+  <!-- S0: POČETNI ZASLON (T6, R005) -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-badge">Edukativna podrška za djecu s disleksijom</span>
+        <h1>Učenje postaje lakše<br>uz pravog pomagača</h1>
+        <p class="hero-desc">Chatbot koji govori jednostavno, ohrabruje i pomaže djeci s disleksijom savladati školske zadatke.</p>
+        <div class="hero-actions">
+          <!-- GUMB min. 44×44px (R007, R005) — max 2 klika do chatbota -->
+          <a href="chatbot.html" class="btn btn-primary btn-large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Razgovaraj s chatbotom
+          </a>
+          <a href="#sto-je-disleksija" class="btn btn-secondary btn-large">Saznaj više</a>
+        </div>
+        <p class="hero-note">Bez registracije · Odmah dostupno</p>
+      </div>
+    </section>
+
+    <!-- DVA PORTALA (R003) -->
+    <section class="portals">
+      <div class="portal portal-child">
+        <div class="portal-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h2>Za djecu</h2>
+        <p>Chatbot, vježbe i igre — sve na jednom mjestu.</p>
+        <a href="chatbot.html" class="btn btn-primary">Pokreni chatbot →</a>
+      </div>
+      <div class="portal portal-parent">
+        <div class="portal-icon portal-icon-neutral">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h2>Za roditelje i nastavnike</h2>
+        <p>Praćenje aktivnosti, izvješća i savjeti.</p>
+        <a href="roditelj-dashboard.html" class="btn btn-secondary">Prijavi se →</a>
+      </div>
+    </section>
+
+    <!-- ŠTO JE DISLEKSIJA (R002) -->
+    <section class="info-section" id="sto-je-disleksija">
+      <h2>Što je disleksija?</h2>
+      <p>Disleksija je teškoća učenja koja utječe na čitanje i pisanje. Nije vezana uz inteligenciju. Djeca s disleksijom mogu uspješno učiti uz prilagođenu podršku.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER (R004, R020) -->
+  <footer class="footer">
+    <p>© 2026 Slovko</p>
+    <p class="footer-disclaimer">Ovaj alat služi kao edukativna podrška i ne zamjenjuje stručnu dijagnostiku ni logopedsku terapiju.</p>
+  </footer>
+
+</body>
+</html>
