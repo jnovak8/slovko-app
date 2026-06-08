@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovko – Pokreni</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="fran.css">
+</head>
+<body class="s0-page">
+
+  <!-- S0: Minimalistički početni zaslon (T6, R005, R007) -->
+  <!-- Max 2 elementa: naziv + gumb. Bez registracije. -->
+
+  <div class="disclaimer-bar">
+    Ovaj alat nije medicinski uređaj. Koristi se isključivo u edukativne svrhe.
+  </div>
+
+  <main class="s0-main" role="main">
+    <!-- Element 1: Logo + naziv -->
+    <div class="s0-brand">
+      <div class="s0-logo" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 120 120">
+          <rect width="120" height="120" rx="24" fill="#E1F5EE"/>
+          <rect x="24" y="28" width="72" height="58" rx="6" fill="#1D9E75"/>
+          <rect x="24" y="28" width="10" height="58" rx="5" fill="#085041"/>
+          <rect x="38" y="38" width="18" height="3" rx="1.5" fill="#E1F5EE" opacity="0.8"/>
+          <rect x="38" y="45" width="13" height="3" rx="1.5" fill="#E1F5EE" opacity="0.6"/>
+          <rect x="38" y="52" width="16" height="3" rx="1.5" fill="#E1F5EE" opacity="0.6"/>
+        </svg>
+      </div>
+      <h1 class="s0-naziv">Slovko</h1>
+    </div>
+
+    <!-- Element 2: Dominantni CTA gumb (R005, R007 — min 44×44px) -->
+    <a href="chatbot.html" class="btn-s0-cta" id="ctaGumb" aria-label="Pokreni razgovor s chatbotom Lako">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      Pitaj chatbota
+    </a>
+
+    <p class="s0-napomena">Bez registracije · 1 klik</p>
+
+    <!-- Link na roditeljski dio (ne odvlači od CTA) -->
+    <a href="roditelj-dashboard.html" class="s0-roditelj-link">Za roditelje →</a>
+  </main>
+
+</body>
+</html>
