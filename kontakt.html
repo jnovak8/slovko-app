@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slovko – Kontakt</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="dominik.css">
+</head>
+<body>
+
+  <div class="disclaimer-bar">
+    Ovaj alat nije medicinski uređaj. Koristi se isključivo u edukativne svrhe.
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true">
+          <rect width="120" height="120" rx="16" fill="#1D9E75"/>
+          <rect x="24" y="28" width="72" height="58" rx="6" fill="#E1F5EE"/>
+          <rect x="24" y="28" width="10" height="58" rx="5" fill="#9FE1CB"/>
+          <circle cx="72" cy="70" r="18" fill="#1D9E75"/>
+          <path d="M63 70 L69 76 L82 63" fill="none" stroke="#E1F5EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="nav-title">Slovko</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="kontakt-main">
+    <div class="kontakt-card">
+      <h1>Kontaktirajte nas</h1>
+      <p class="kontakt-opis">Imate pitanja ili prijedloge? Javite nam se.</p>
+
+      <!-- KONTAKT FORMA (T17, R014) -->
+      <div id="formWrapper">
+        <div class="form-group">
+          <label for="ime">Ime i prezime *</label>
+          <input type="text" id="ime" name="ime" placeholder="npr. Ana Kovačić" autocomplete="name" aria-required="true">
+          <span class="field-error" id="imeError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail adresa *</label>
+          <input type="email" id="email" name="email" placeholder="npr. ana@email.com" autocomplete="email" aria-required="true">
+          <span class="field-error" id="emailError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label>Tip korisnika *</label>
+          <div class="tip-options" role="radiogroup" aria-label="Odaberi tip korisnika">
+            <label class="tip-opt">
+              <input type="radio" name="tip" value="roditelj" checked>
+              <span>Roditelj</span>
+            </label>
+            <label class="tip-opt">
+              <input type="radio" name="tip" value="nastavnik">
+              <span>Nastavnik</span>
+            </label>
+            <label class="tip-opt">
+              <input type="radio" name="tip" value="skola">
+              <span>Škola</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="poruka">Poruka *</label>
+          <textarea id="poruka" name="poruka" placeholder="Napišite svoju poruku..." rows="4" aria-required="true"></textarea>
+          <span class="field-error" id="porukaError" role="alert"></span>
+        </div>
+
+        <!-- GDPR (R018) -->
+        <div class="form-group gdpr-group">
+          <label class="gdpr-label">
+            <input type="checkbox" id="gdpr" aria-required="true">
+            <span>Suglasan/na sam s pohranom podataka radi odgovora na upit (GDPR)</span>
+          </label>
+          <span class="field-error" id="gdprError" role="alert"></span>
+        </div>
+
+        <button class="btn btn-primary btn-full" onclick="posaljiFormu()" id="submitBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          Pošalji poruku
+        </button>
+      </div>
+
+      <!-- POTVRDA (R014) -->
+      <div id="potvrda" class="potvrda" hidden aria-live="polite">
+        <div class="potvrda-icon" aria-hidden="true">✓</div>
+        <h2>Poruka poslana!</h2>
+        <p>Hvala na poruci. Odgovorit ćemo vam u roku od 2 radna dana na vašu e-mail adresu.</p>
+        <a href="index.html" class="btn btn-primary">Povratak na početnu</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="dominik.js"></script>
+</body>
+</html>
